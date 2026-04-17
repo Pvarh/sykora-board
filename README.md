@@ -59,8 +59,8 @@ graph TB
 | Photo gallery | Per-order image uploads with Sharp-generated thumbnails |
 | Activity log | Full history of status changes, comments, and updates per order |
 | Sales statistics | 5 stat endpoints — pipeline value, conversion rates, branch comparison |
-| Calendar + Booking | Meeting scheduling and sent-meeting tracking |
-| Public API | External integration endpoint with dedicated API-key authentication |
+| Calendar + Booking API | Customers book showroom sittings through the public website; the calendar API syncs appointments into BOARD, and managers assign each booking to a specific salesperson |
+| Public API | External integration endpoint with dedicated API-key authentication — powers the website booking flow |
 | Email notifications | SMTP-based invitations, password resets, status alerts |
 
 ## Scale
@@ -75,8 +75,8 @@ graph TB
 
 - **Most complex project in the portfolio** — full CRUD, real-time Kanban, image processing, email, multi-role auth, public API — all designed, built, and maintained by one developer
 - **Drag-and-drop Kanban** with @dnd-kit — orders flow through the pipeline visually, replacing spreadsheet-based tracking
-- **Public API module** with a separate authentication mechanism (API keys, not JWT) — designed for future integration with Sykora's ERP and external partners
-- **License-key system** — deployment includes a license key file mounted as a read-only volume, enabling per-instance activation
+- **Website-to-CRM booking flow** — customers book showroom sittings on the public website, appointments sync into BOARD via calendar API, and managers assign each visitor to a salesperson — closing the loop from online lead to in-person meeting
+- **Public API module** with a separate authentication mechanism (API keys, not JWT) — powers the website integration and is ready for ERP and partner connections
 
 ## What's not here
 
